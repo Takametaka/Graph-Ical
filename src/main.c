@@ -14,7 +14,7 @@ int main()
     Graph g = newGraph(G_SIZE);
     randomizeCoord(g);
 
-    sfVideoMode mode = {SCREEN_X + MENU_X,SCREEN_Y,32};
+    sfVideoMode mode = {SCREEN_X /* + MENU_X */,SCREEN_Y,32};
     sfRenderWindow *window;
     sfEvent event;
 
@@ -36,7 +36,7 @@ int main()
         if(update)
         {  
             sfRenderWindow_clear(window, sfBlack);
-            displayMenu(window);
+            //displayMenu(window);
             displayGraph_sf(window,g);
             sfRenderWindow_display(window);
             update = 1;
